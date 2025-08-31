@@ -1,0 +1,90 @@
+# ======================
+# 🎨 Versi Transparan
+# ======================
+
+# Base colors (transparent background)
+color-link default "#D0D0D0,default"
+color-link comment "#6B7388,default"
+color-link identifier "#89DDFF,default"
+color-link constant "#82AAFF,default"
+color-link constant.string "#A6E3A1,default"
+color-link constant.string.char "#A6E3A1,default"
+color-link statement "#C792EA,default"
+color-link symbol "#D0D0D0,default"
+color-link preproc "#89DDFF,default"
+color-link type "#C792EA,default"
+color-link special "#F2CDCD,default"
+color-link underlined "#FF9CAC,default"
+color-link error "bold #F07178,default"
+color-link todo "bold #F2CDCD,default"
+
+# UI elements (transparent where possible)
+color-link hlsearch "#D0D0D0,#89DDFF"
+color-link statusline "white,black"
+color-link tabbar "#D0D0D0,#C792EA"
+color-link indent-char "#51576D,default"
+color-link line-number "#6C7086,default"
+color-link current-line-number "#C792EA,default"
+color-link cursor-line "default"
+color-link color-column "default"
+
+# Git diffs
+color-link diff-added "#A6E3A1"
+color-link diff-modified "#FFCB6B"
+color-link diff-deleted "#F07178"
+color-link gutter-error "#F07178,default"
+color-link gutter-warning "#FFCB6B,default"
+
+# Symbols, braces, etc
+color-link symbol.tag "#C792EA,default"
+color-link match-brace "#D0D0D0,#89DDFF"
+color-link tab-error "#F07178"
+color-link trailingws "#F07178"
+
+# Extended types
+color-link type.extended "default"
+
+
+# ======================
+# 💾 Backup versi lama
+# ======================
+# color-link default "#D0D0D0,#1E1E2E"            # abu terang di bg gelap biru keunguan
+# color-link comment "#6B7388,#1E1E2E"            # abu kebiruan untuk komentar
+# color-link identifier "#89DDFF,#1E1E2E"         # cyan lembut untuk identifier
+# color-link constant "#82AAFF,#1E1E2E"           # biru terang untuk konstanta
+# color-link constant.string "#A6E3A1,#1E1E2E"    # hijau neon untuk string
+# color-link constant.string.char "#A6E3A1,#1E1E2E"
+# color-link statement "#C792EA,#1E1E2E"          # ungu vibrant untuk statement
+# color-link symbol "#D0D0D0,#1E1E2E"
+# color-link preproc "#89DDFF,#1E1E2E"
+# color-link type "#C792EA,#1E1E2E"
+# color-link special "#F2CDCD,#1E1E2E"
+# color-link underlined "#FF9CAC,#1E1E2E"
+# color-link error "bold #F07178,#1E1E2E"
+# color-link todo "bold #F2CDCD,#1E1E2E"
+#
+# # UI elements
+# color-link hlsearch "#1E1E2E,#89DDFF"
+# color-link statusline "#1E1E2E,#89DDFF"
+# color-link tabbar "#1E1E2E,#C792EA"
+# color-link indent-char "#51576D,#1E1E2E"
+# color-link line-number "#6C7086,#1E1E2E"
+# color-link current-line-number "#C792EA,#1E1E2E"
+# color-link cursor-line "#2A2A3F"
+# color-link color-column "#2A2A3F"
+#
+# # Git diffs
+# color-link diff-added "#A6E3A1"
+# color-link diff-modified "#FFCB6B"
+# color-link diff-deleted "#F07178"
+# color-link gutter-error "#F07178,#1E1E2E"
+# color-link gutter-warning "#FFCB6B,#1E1E2E"
+#
+# # Symbols, braces, etc
+# color-link symbol.tag "#C792EA,#1E1E2E"
+# color-link match-brace "#1E1E2E,#89DDFF"
+# color-link tab-error "#F07178"
+# color-link trailingws "#F07178"
+#
+# # Extended types
+# color-link type.extended "default"

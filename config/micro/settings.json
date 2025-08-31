@@ -1,0 +1,10 @@
+{
+    "colorscheme": "mine",
+    "tabsize": 2,
+    "autosu": true,
+    "ruler": true,
+    "scrollbar": false,
+    "truecolor": true,
+    "cursorline": false,
+    "statusline": true
+}

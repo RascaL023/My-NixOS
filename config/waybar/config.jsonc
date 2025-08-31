@@ -1,0 +1,63 @@
+{
+  // General
+  "layer": "top",
+  "spacing": 5,
+  "margin": "0 0 0 0",
+  "height": 25,
+
+  // Modules layout
+  "modules-left": ["memory"],
+  "modules-center": ["hyprland/workspaces"],
+  "modules-right": ["backlight", "pulseaudio", "network", "battery", "clock"],
+
+  // Modules
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "format-icons": {
+      "active": "󰢘",
+      "default": " "
+    },
+    "persistent-workspaces": {
+      "*": 5
+    }
+  },
+
+  // "hyprland/window": {
+  //   "max-length": 20
+  // },
+
+  "memory": {
+    "interval": 10,
+    "format": "󰍛 {percentage}%"
+  },
+
+  "battery": {
+    "format": "{icon} ",
+    "format-alt": "{icon}  {capacity}%",
+    "format-icons": ["", "", "", "", ""]
+  },
+
+  "network": {
+  	"interval": 10,
+    "format-wifi": "{icon}",
+    "format-ethernet": "󰈀 {ifname}",
+    "format-disconnected": "󰤭 ",
+    "format-alt": "{icon} {signalStrength}% | {essid}",
+    "format-icons": ["󰤯 ","󰤟 ","󰤢 ","󰤥 ","󰤨 "],
+    "tooltip-format": "Interface: {ifname}\nStrength: {signalStrength}%\nSSID: {essid}\nIP: {ipaddr}"
+  },
+
+  "clock": {
+    "format": "{:%H:%M}",
+    "format-alt": "{:%a, %d %b %Y %H:%M}"
+  },
+
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-icons": [" ", " ", " "]
+  },
+
+  "backlight": {
+    "format": "  {percent}%"
+  }
+}
