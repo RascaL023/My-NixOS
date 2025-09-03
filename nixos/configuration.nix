@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  imports = [ ./hardware-configuration.nix ];
+	imports = [ ./hardware-configuration.nix ];
 
   # Bootloader
   boot.loader.grub.enable = true;
@@ -24,8 +24,8 @@
   services.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
-    enable = true;
-    alsa.enable = true;
+  	enable = true;
+  	alsa.enable = true;
     alsa.support32Bit = true;
     pulse.enable = true;
   };
@@ -43,57 +43,72 @@
   # Hyprland program toggle
   programs.hyprland.enable = true;
   
-   nix.settings.experimental-features = [ "nix-command" "flakes" ];
-   nixpkgs.config.allowUnfree = true;
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nixpkgs.config.allowUnfree = true;
 
-   environment.systemPackages = with pkgs; [
-   # Basic
-	    micro
-	    wget
-	    vscode
-	    git
-	    tree
-	    htop
-	    cava
-	    xwayland
-	    foot
-	    killall
-	    lf
+  environment.systemPackages = with pkgs; [
+  # Basic
+		micro
+    wget
+    vscode
+    git
+    tree
+    foot
+    nemo
+    exfatprogs
 
-	# Preview - Editor
+  # Extra
+    htop
+    cava
+    kitty              
+    lf
+    killall
+    # cmus
+    termusic
+    onefetch
+    tty-clock
+    cmatrix
+
+  # Preview - Editor
 		viewnior
 		ffmpeg
 		mpv
 
-    # Code Extra
-	    openjdk17
-	    nodejs
-	    php83
-	    mariadb
+  # Code Extra
+    openjdk17
+    nodejs
 
-    # Extractor
-    	# zip unzip 
-    	# gnutar 
-    	# rar unrar 
-    	# p7zip
-    	file-roller
-    	gnutar
-    	gzip
-    	bzip2
-    	xz
-    	p7zip
-    	unrar
+  # Database
+    php83
+    apacheHttpd
 
-	# Hyprland
-	    hyprland          
-	    waybar             # panel (taskbar)
-	    wofi               # launcher
-	    kitty              # terminal
-	    mako               # notifications
-	    grim               # screenshot
-	    slurp
-	    swww			   # background
+  # Compress - Extract
+  	file-roller
+  	gnutar
+  	gzip
+  	bzip2
+  	xz
+  	p7zip
+  	unrar
+
+  # Hyprland
+    hyprland          
+    xwayland			   
+    waybar             
+    swww
+    wofi               
+    grim               
+    mako               
+    slurp
    ];
+
+  # Default mount
+  fileSystems."/mnt/Shared" = {
+    device = "/dev/disk/by-uuid/6CC9-D17C";
+    fsType = "exfat";
+    options = [ "defaults" "uid=1000" "gid=1000" ];
+  };
+  
    
   system.stateVersion = "25.05";
 }

@@ -1,0 +1,7 @@
+[general]
+framerate = 30
+bars = 20
+
+[output]
+method = raw
+channels = mono
