@@ -1,4 +1,4 @@
-#waybar { background: unset; font-weight: 600; font-size: 10.5px; color: #cfa3e9; } 
+#waybar { background: unset; font-weight: 600; font-size: 10px; color: #cfa3e9; } 
 @keyframes wkwk { 
 	0% { box-shadow: 0 0 1px #a200ff; background: #c770fa; } 
 	50% { box-shadow: 0 0 6px 3px #a200ff; background: #bd58f7; } 
@@ -37,7 +37,7 @@ tooltip {
 /* Workspaces */ 
 #workspaces button { 
 	margin: 2px 3px; 
-	padding: 0 6px; 
+	padding: 0 4px; 
 	border-radius: 30px 2px 30px 2px; 
 	transition: all .2s ease; 
 	color: #cdd6f4; 

@@ -3,5 +3,6 @@ if pgrep waybar > /dev/null; then
     pkill waybar
 else
     # Kalau waybar mati → hidupkan lagi di background
-    waybar & disown
+    waybar -c ~/.dotfiles/config/waybar/config.jsonc \
+           -s ~/.dotfiles/themes/current/waybar/style.css & disown
 fi

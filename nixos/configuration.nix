@@ -54,7 +54,7 @@
     git
     tree
     foot
-    nemo
+    # nemo
     exfatprogs
 
   # Extra
@@ -63,7 +63,6 @@
     kitty              
     lf
     killall
-    # cmus
     termusic
     onefetch
     tty-clock

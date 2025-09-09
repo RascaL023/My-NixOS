@@ -6,7 +6,7 @@
   // "height": 25,
 
   // Modules layout
-  "modules-left": ["memory", "cpu", "temperature", "disk", "custom/cmus"],
+  "modules-left": ["memory", "cpu", "temperature", "disk"],
   "modules-center": ["hyprland/workspaces"],
   "modules-right": ["backlight", "pulseaudio", "network", "battery", "clock"],
 
@@ -15,7 +15,7 @@
     "format": "{icon}",
     "format-icons": {
       "active": "󰢘",
-      "default": " "
+      "default": ""
     },
     "persistent-workspaces": {
       "*": 5
@@ -28,7 +28,7 @@
   },
 
 	"cpu": {
-	  "format": "  {usage}%",
+	  "format": " {usage}%",
 	  "interval": 2,
 	  "max-length": 20
 	},
@@ -42,19 +42,8 @@
 
 	"disk": {
 	  "interval": 60,
-	  "format": "  {percentage_used}%",
+	  "format": " {percentage_used}%",
 	  "path": "/"
-	},
-
-	"custom/cmus": {
-	  "return-type": "text",
-	  "exec": "cmus-remote -Q | awk -F' ' '/tag title/ {title=$0; sub(\"tag title \", \"\", title)} /tag artist/ {artist=$0; sub(\"tag artist \", \"\", artist)} /file/ && !title {file=$0; sub(\"file .*/\", \"\", file); sub(\".mp3$\", \"\", file)} END {if (title) print artist \" - \" title; else print file}'",
-	  "interval": 2,
-	  "format": "󰝚  {}",
-	  "on-click": "cmus-remote -u",
-	  "on-scroll-up": "cmus-remote -n",
-	  "on-scroll-down": "cmus-remote -r",
-	  "max-length": 30
 	},
 	
   "battery": {

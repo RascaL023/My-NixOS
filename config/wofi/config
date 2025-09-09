@@ -1,0 +1,6 @@
+[wofi]
+show=drun
+width=40%
+height=50%
+location=center
+allow_images=true

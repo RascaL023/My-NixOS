@@ -1,24 +1,55 @@
 window {
-    margin: 0px;
-    background-color: #1e1e2e;
-    border-radius: 12px;
-    border: 2px solid #89b4fa;
+    border: 2px solid #a855f7;    /* ungu neon */
+    background-color: rgba(10, 1, 10, 0.8);
+    color: #e0e0ff;
+    font-family: "Hack";
+    font-size: 14px;
 }
 
 #input {
-    margin: 5px;
-    border: none;
-    background: #11111b;
-    color: #cdd6f4;
-    padding: 5px;
+    margin: 12px;
+    padding: 8px 12px;
+    border-radius: 12px;
+    border: 2px solid #9333ea;
+    background-color: #1f1533;
+    color: #e0e0ff;
+    box-shadow: 0 0 10px #7e22ce;
+    outline: none;
+    font-style: italic;
+    font-weight: bold;
+}
+
+#entry:first-child{
+		margin-top: 20px;
 }
 
 #entry {
-    padding: 5px;
-    margin: 2px;
+    padding: 10px 14px;
+    margin: 0 8px;
+    border-radius: 10px;
+    background: transparent;
+    outline: none;
 }
 
 #entry:selected {
-    background: #89b4fa;
-    color: #1e1e2e;
+    background-color: #a855f7;   /* highlight ungu neon */
+    color: #141022;              /* teks jadi gelap biar kontras */
+    box-shadow: 0 0 5px #a855f7, 0 0 10px #9333ea;
+}
+
+#scroll {
+    background: transparent;
+}
+
+#scrollbar {
+    background: #2e1a47;
+    border-radius: 10px;
+}
+
+#scrollbar:dir(ltr) {
+    margin-left: 6px;
+}
+
+#scrollbar:dir(rtl) {
+    margin-right: 6px;
 }
