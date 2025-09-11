@@ -1,10 +1,13 @@
 {
   "meta": { "name": "default", "variant": "dark" },
-  "cava": {
-      "gradient1" : "#4B0082",
-      "gradient2" : "#8A2BE2",
-      "gradient3" : "#BA55D3",
-      "gradient4" : "#DA70D6",
-      "gradient5" : "#D8BFD8"
+  "apps": {
+  	"kitty": "#efefef",
+	  "cava": {
+	      "gradient1" : "#4B0082",
+	      "gradient2" : "#8A2BE2",
+	      "gradient3" : "#BA55D3",
+	      "gradient4" : "#DA70D6",
+	      "gradient5" : "#D8BFD9"
+	  }
   }
 }

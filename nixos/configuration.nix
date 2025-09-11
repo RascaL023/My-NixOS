@@ -49,13 +49,17 @@
   environment.systemPackages = with pkgs; [
   # Basic
 		micro
-    wget
     vscode
-    git
-    tree
     foot
-    # nemo
-    exfatprogs
+    nemo
+
+  # Utils
+  	wget
+  	git
+  	tree
+  	exfatprogs
+  	brightnessctl
+  	pamixer
 
   # Extra
     htop
@@ -67,6 +71,7 @@
     onefetch
     tty-clock
     cmatrix
+    nwg-look
 
   # Preview - Editor
 		viewnior
@@ -76,6 +81,9 @@
   # Code Extra
     openjdk17
     nodejs
+    gcc
+    cjson
+    sassc
 
   # Database
     php83
@@ -95,7 +103,8 @@
     xwayland			   
     waybar             
     swww
-    wofi               
+    wofi 
+    rofi-wayland              
     grim               
     mako               
     slurp
