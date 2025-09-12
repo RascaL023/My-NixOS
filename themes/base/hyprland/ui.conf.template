@@ -34,9 +34,9 @@ master {
     new_status = master
 }
 
-# gestures {
-#     workspace_swipe = on
-# }
+gestures {
+    workspace_swipe = on
+}
 
 animations {
     enabled = true

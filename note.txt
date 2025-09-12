@@ -1,1 +1,0 @@
-ln -sfn /home/rascal/.dotfiles/themes/default .dotfiles/themes/current

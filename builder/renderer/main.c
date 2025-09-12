@@ -25,9 +25,7 @@ cJSON *find_json_key(cJSON *root, const char *key) {
     if (!root) return NULL;
 
     // kalau root punya nama dan sama dengan key → ketemu
-    if (root->string && strcmp(root->string, key) == 0) {
-        return root;
-    }
+    if (root->string && strcmp(root->string, key) == 0) return root;
 
     // kalau root punya child (object/array) → telusuri anaknya
     cJSON *child = root->child;

@@ -1,0 +1,47 @@
+#waybar { background: ${waybarBg}; font-weight: 600; font-size: ${waybarFontSize}; color: ${waybarFg}; } 
+@keyframes wkwk { 
+	0% { box-shadow: 0 0 1px #a200ff; background: #c770fa; } 
+	50% { box-shadow: 0 0 6px 3px #a200ff; background: #bd58f7; } 
+	100% { box-shadow: 0 0 1px #a200ff; background: #c770fa; } 
+} 
+
+/* Modules Container */ 
+.modules-right, .modules-left, .modules-center{ 
+	background: ${modulesBg}; 
+	margin: 5px 5px 0; 
+	border-radius: ${modulesBorderRadius}; 
+	padding: 0 10px; 
+	animation: wkwk .3s; 
+	border: ${modulesBorder}; 
+} 
+
+tooltip { 
+	background-color: ${tooltipBg}; 
+	border-radius: ${tooltipBorderRadius}; 
+	padding: 4px 8px; 
+} 
+
+
+/* Modules */ 
+#network, #pulseaudio, #battery, #clock, #backlight, #memory, #cpu, #temperature, #disk { 
+	padding: 3px; border-radius: 3px; 
+	transition: all .2s ease-in-out; 
+} 
+
+#clock{ margin-left: 5px; }
+
+#network:hover, #pulseaudio:hover, #battery:hover, #clock:hover, #backlight:hover, 
+#memory:hover, #window:hover, #cpu:hover, #temperature:hover, #disk:hover { color: ${moduleHoverFg}; } 
+
+
+/* Workspaces */ 
+#workspaces button { 
+	margin: 2px 3px; 
+	padding: 0 4px; 
+	border-radius: 30px 2px 30px 2px; 
+	transition: all .2s ease; 
+	color: ${workspacesBtn}; 
+	background: unset; 
+} 
+
+#workspaces button.active { /* animation: wkwk 4s ease-in-out infinite; */ background: ${workspacesActiveBg}; color: ${workspacesActiveFg}; }
