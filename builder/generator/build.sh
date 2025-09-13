@@ -1,15 +1,21 @@
-if [[ $1 == 1 ]] then
-    clear;
+if [[ $1 == 1 ]]; then
+    clear
 fi
 
-# javac -d bin -cp lib/* src/jsoncgen/*.java
-# java -cp bin:lib/* jsoncgen.Main
+rootOutputPath="/home/rascal/.dotfiles/themes/theme"
+read -p "Masukkan nama tema: " themeName
+read -p "Start(y/n)? " inp
 
-javac -d bin -cp "lib/*" $(find src -name "*.java")
-java -cp bin:lib/* jsoncgen.Main
+if [[ $inp == 'y' ]]; then
+    mkdir -p "$rootOutputPath/$themeName"
+    echo "Status:"
+    javac -d bin -cp "lib/*" $(find src -name "*.java")
+    java -cp bin:lib/* jsoncgen.Main "$rootOutputPath" "$themeName"
+fi
 
+echo "Proses selesai..."
 read -s
 
-if [[ $2 == 1 ]] then
-    clear;
+if [[ $2 == 1 ]]; then
+    clear
 fi

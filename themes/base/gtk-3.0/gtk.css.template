@@ -1,0 +1,11 @@
+.nemo-window{
+  background-color: ${nemoBg};
+}
+
+.toolbar, .primary-toolbar{
+  background-color: ${toolbar};
+}
+
+.sidebar, .view{
+  background-color: ${view};
+}

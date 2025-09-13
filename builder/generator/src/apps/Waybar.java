@@ -2,7 +2,10 @@ package jsoncgen.apps;
 import jsoncgen.tools.ConfigSetter;
 
 public class Waybar extends ConfigSetter {
-    public Waybar() { initDefaults(); }
+    public Waybar(String templatePath) {
+        parseTemplate(templatePath);
+        initDefaults();
+    }
 
     @Override
     protected void initDefaults() {
