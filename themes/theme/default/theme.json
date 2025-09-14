@@ -13,18 +13,6 @@
     "workspacesActiveBg": "#b86fd4",
     "tooltipBg": "rgba(30, 30, 46, 0.95)"
   },
-  "gtk3": {
-    "toolbar": "rgba(0, 0, 0, 0.3)",
-    "view": "transparent",
-    "nemoBg": "rgba(0, 0, 0, 0.65)"
-  },
-  "cava": {
-    "gradient4": "#DA70D6",
-    "gradient5": "#D8BFD9",
-    "gradient2": "#8A2BE2",
-    "gradient3": "#BA55D3",
-    "gradient1": "#4B0082"
-  },
   "kitty": {
     "cursor": "#AC82E9",
     "fg": "#d8cab8",
@@ -47,5 +35,29 @@
     "color13": "#f3fc7b",
     "color14": "#8F56E1",
     "color15": "#d8cab8"
+  },
+  "cava": {
+    "gradient4": "#DA70D6",
+    "gradient5": "#D8BFD9",
+    "gradient2": "#8A2BE2",
+    "gradient3": "#BA55D3",
+    "gradient1": "#4B0082"
+  },
+  "gtk-3.0": {
+    "toolbar": "rgba(0, 0, 0, 0.3)",
+    "view": "transparent",
+    "nemoBg": "rgba(0, 0, 0, 0.65)"
+  },
+  "hyprland": {
+    "shadowPower": "1",
+    "shadow": "false",
+    "gapsOut": "5",
+    "shadowRange": "6",
+    "borderSize": "2",
+    "inactiveBorder": "rgba(0,0,0,0)",
+    "activeBorder": "rgba(8f00ffee) rgba(33ccffee) 45deg",
+    "rounding": "10",
+    "gapsIn": "3",
+    "shadowColor": "rgba(0,255,255,0.4)"
   }
 }

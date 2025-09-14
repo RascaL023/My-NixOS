@@ -5,6 +5,7 @@ general {
     layout = dwindle
     col.active_border = ${activeBorder}
     col.inactive_border = ${inactiveBorder}
+}
 
 decoration {
     blur {
