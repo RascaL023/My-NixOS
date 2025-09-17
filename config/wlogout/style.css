@@ -1,0 +1,55 @@
+* {
+	background-image: none;
+	box-shadow: none;
+}
+
+window {
+	background-color: rgba(10, 10, 24, 0.6); /* ungu gelap transparan */
+}
+
+button {
+  border-radius: 15px;
+	text-decoration-color: #EDE7F6;
+  color: #EDE7F6;
+	background-color: rgba(0, 0, 0, 0.6);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 25%;
+}
+
+button:focus, button:active, button:hover {
+	background-color: #9D4EDD; /* ungu terang */
+	outline-style: none;
+	color: #FFFFFF;
+	border-color: #BB86FC; /* aksen ungu neon */
+}
+
+#lock, #logout, #suspend, #shutdown, #reboot, #hibernate {
+	margin: 10px;
+	padding: 10px;
+}
+
+/* ikon tetap sama */
+#lock {
+    background-image: image(url("/nix/store/fripp5s4r0cd6fzgd3gmgsmaaszqd4hn-wlogout-1.2.2/share/wlogout/icons/lock.png"), url("/usr/local/share/wlogout/icons/lock.png"));
+}
+
+#logout {
+    background-image: image(url("/nix/store/fripp5s4r0cd6fzgd3gmgsmaaszqd4hn-wlogout-1.2.2/share/wlogout/icons/logout.png"), url("/usr/local/share/wlogout/icons/logout.png"));
+}
+
+#suspend {
+    background-image: image(url("/nix/store/fripp5s4r0cd6fzgd3gmgsmaaszqd4hn-wlogout-1.2.2/share/wlogout/icons/suspend.png"), url("/usr/local/share/wlogout/icons/suspend.png"));
+}
+
+#hibernate {
+    background-image: image(url("/nix/store/fripp5s4r0cd6fzgd3gmgsmaaszqd4hn-wlogout-1.2.2/share/wlogout/icons/hibernate.png"), url("/usr/local/share/wlogout/icons/suspend.png"));
+}
+
+#shutdown {
+    background-image: image(url("/nix/store/fripp5s4r0cd6fzgd3gmgsmaaszqd4hn-wlogout-1.2.2/share/wlogout/icons/shutdown.png"), url("/usr/local/share/wlogout/icons/shutdown.png"));
+}
+
+#reboot {
+    background-image: image(url("/nix/store/fripp5s4r0cd6fzgd3gmgsmaaszqd4hn-wlogout-1.2.2/share/wlogout/icons/reboot.png"), url("/usr/local/share/wlogout/icons/reboot.png"));
+}

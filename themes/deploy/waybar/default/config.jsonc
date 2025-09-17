@@ -6,7 +6,7 @@
   // "height": 25,
 
   // Modules layout
-  "modules-left": ["memory", "cpu", "temperature"],
+  "modules-left": ["memory", "cpu", "temperature", "disk"],
   "modules-center": ["hyprland/workspaces"],
   "modules-right": ["backlight", "pulseaudio", "network", "battery", "clock"],
 
@@ -69,11 +69,11 @@
 
   "pulseaudio": {
     "format": "{icon} {volume}%",
-    "format-icons": [" ", " ", " "]
+    "format-icons": ["", "", ""]
   },
 
   "backlight": {
-    "format": "  {percent}%",
+    "format": " {percent}%",
     "tooltip-format": "Brigthness: {percent}%"
   }
 }

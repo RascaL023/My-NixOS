@@ -1,0 +1,85 @@
+/* ~/.config/rofi/config.rasi
+   Modern Minimal Purple
+*/
+
+configuration {
+    modi: "drun,run,window";
+    show-icons: true;
+    icon-theme: "Papirus";
+    font: "Hack Nerd Font 12";
+
+    timeout {
+        action: "kb-cancel";
+        delay: 0;
+    }
+
+    filebrowser {
+        directories-first: true;
+        sorting-method: "name";
+    }
+}
+
+@theme "purple"
+
+/* ========== PALET WARNA ========== */
+* {
+    bg-main:        #0e0e12;   /* hampir hitam, elegan */
+    bg-alt:         #1a1a24;   /* abu gelap untuk input */
+    fg-main:        #e0e0e6;   /* abu terang, readable */
+    accent:         #a855f7;   /* ungu lembut (purple accent) */
+    highlight:      #7c3aed;   /* deep purple untuk hover/selected */
+    selected-fg:    #ffffff;   /* teks putih saat dipilih */
+
+    border-radius:  18px;
+    padding:        10px;
+}
+
+/* ========== WINDOW ========== */
+window {
+    width: 40%;
+    height: 60%;
+    border: none;
+    background-color: @bg-main;
+    padding: 20px;
+}
+
+/* ========== MAINBOX ========== */
+mainbox {
+    spacing: 14px;
+}
+
+/* ========== INPUTBAR ========== */
+inputbar {
+    padding: 10px 14px;
+    border: none;
+    border-radius: @border-radius;
+    background-color: @bg-alt;
+    text-color: @fg-main;
+}
+
+/* ========== LISTVIEW ========== */
+listview {
+    spacing: 10px;
+    lines: 12;
+    fixed-height: true;
+}
+
+/* ========== ELEMENTS (items) ========== */
+element {
+    padding: 8px 12px;
+    border-radius: 12px;
+    text-color: @fg-main;
+    max-width: 50px;
+}
+
+element selected {
+    background-color: @highlight;
+    text-color: @selected-fg;
+    margin: 2px;
+}
+
+/* ========== ENTRY (cursor bar) ========== */
+entry {
+    cursor-color: @accent;
+    cursor-width: 2px;
+}

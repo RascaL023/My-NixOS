@@ -17,8 +17,6 @@ done
 
 # Panggil rofi dengan preview
 SELECTED=$(echo -e "$LIST" | rofi -dmenu -p "Wallpaper:")
-# SELECTED=$(echo -e "$LIST" | wofi --dmenu --allow-images --prompt "Wallpaper:")
-
 
 # Kalau tidak ada pilihan → keluar
 [ -z "$SELECTED" ] && exit

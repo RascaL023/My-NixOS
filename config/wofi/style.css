@@ -1,0 +1,30 @@
+window {
+    width: 80%;
+    height: 70%;
+}
+
+#input {
+    border: none;
+    padding: 10px;
+    font-size: 18px;
+}
+
+#entry {
+    padding: 10px;
+    margin: 10px;
+}
+
+#img {
+    size: 128px;   /* thumbnail size */
+    margin: 10px;
+}
+
+#outer-box {
+    spacing: 20px;
+}
+
+#inner-box {
+    orientation: horizontal;
+    spacing: 20px;
+}
+

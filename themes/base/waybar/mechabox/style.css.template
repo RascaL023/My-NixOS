@@ -1,49 +1,3 @@
-@define-color rosewater     #f2e6ff; /* ungu muda ke putih */
-@define-color flamingo      #e6ccff; /* lavender soft */
-@define-color pink          #d9b3ff; /* pink-ungu pastel */
-@define-color mauve         #c299ff; /* utama mauve */
-@define-color red           #b366ff; /* deep purple */
-@define-color maroon        #9933ff; /* purple bold */
-@define-color peach         #bf80ff; /* keunguan peach */
-@define-color yellow        #cc99ff; /* lilac pastel */
-@define-color green         #aa88ff; /* hijau → ganti ke ungu pudar */
-@define-color teal          #9570ff; /* teal → biru-ungu */
-@define-color sky           #8c66ff; /* sky → violet */
-@define-color sapphire      #8056ff; /* sapphire → indigo */
-@define-color blue          #734cff; /* biru → deep indigo */
-@define-color lavender      #b380ff; /* lavender kuat */
-@define-color text          #e0d6f7; /* teks putih-ungu */
-@define-color subtext1      #cbbde6;
-@define-color subtext0      #b3a3d6;
-@define-color overlay2      #9c8cc2;
-@define-color overlay1      #8575ad;
-@define-color overlay0      #6e5f99;
-@define-color surface2      #594d80;
-@define-color surface1      #443966;
-@define-color surface0      #33294d;
-@define-color base          #221933; /* base ungu gelap */
-@define-color mantle        #1a1226;
-@define-color crust         #120d1a;
-@define-color main-br       @subtext0;
-@define-color main-bg       @crust;
-@define-color main-fg       @text;
-@define-color accent        @mauve;
-@define-color hover-bg      alpha(@mauve, 0.15);
-@define-color hover-fg      @lavender;
-@define-color outline       alpha(@lavender, 0.5);
-@define-color workspaces    @mantle;
-@define-color temperature   @mantle;
-@define-color memory        @base;
-@define-color cpu           @surface0;
-@define-color time          @surface0;
-@define-color date          @base;
-@define-color tray          @mantle;
-@define-color volume        @mantle;
-@define-color backlight     @base;
-@define-color battery       @surface0;
-@define-color warning       #ff80ff; /* pink-ungu cerah */
-@define-color critical      #cc33ff; /* ungu tajam */
-@define-color charging      #aa66ff; /* ungu elektrik */
 
 * {
 	/* font-family: "0xProto Nerd Font"; */
@@ -56,6 +10,8 @@
 /*------------------------
 	per-module styling
 ------------------------*/
+
+/* group-theme_switcher */
 
 #custom-user {
 	padding: 0 12px;
@@ -121,19 +77,13 @@ button.active label {
 
 #custom-left_div.5,
 #custom-right_div.2 {
-	color: @charging;
+	color: @accent;
 }
 #custom-distro {
-	padding: 0 10px 0 1.5px;
-	font-size: 22px;
-	background-color: @charging;
+	padding: 0 10px 0 3px;
+	font-size: 23px;
+	background-color: @accent;
 	color: @main-bg;
-	transition: ease-in-out .3s;
-}
-
-#custom-distro:hover{
-	/* text-shadow: 0 0 2px rgb(0, 115, 168); */
-	text-shadow: 0 0 2px @blue;
 }
 
 /* idle inhibitor and time */
@@ -170,9 +120,24 @@ button.active label {
 	background-color: @tray;
 	padding: 0 6px 0 4px;
 }
+#bluetooth {
+	background-color: @tray;
+	padding: 0 5px;
+}
+#custom-system_update {
+	background-color: @tray;
+	padding: 0 8px 0 2px;
+}
 #custom-right_div.5 {
 	color: @tray;
 }
+
+/* mpris */
+
+/* #mpris {
+	padding: 0 12px;
+	font-weight: normal;
+} */
 
 /* group-pulseaudio */
 
@@ -243,6 +208,7 @@ button.active label {
 #custom-right_div,
 #custom-right_inv {
 	font-size: 23.1px;
+	/* font-size: 15px; */
 }
 
 /* outline */

@@ -1,0 +1,78 @@
+/* Base Waybar */
+#waybar { 
+  font-family: "Maple Mono NF ExtraBold";
+  /* font-family: "FiraCode Nerd Font Propo:style=Bold"; */
+  background: unset; 
+  font-weight: 900; 
+  font-size: 9.5px; 
+  color: #c9b6f4; /* ungu soft */
+} 
+
+/* @keyframes glowPulse {  */
+/*   0%   { box-shadow: 0 0 2px #9d4edd; }  */
+/*   50%  { box-shadow: 0 0 5px 1px #00c9ff; }  */
+/*   100% { box-shadow: 0 0 2px #9d4edd; }  */
+/* }  */
+
+/* Modules Container */
+.modules-right, .modules-left, .modules-center { 
+  background: rgba(34, 34, 48, 0.85); 
+  margin: 4px 3px 0; 
+  border-radius: 18px; 
+  padding: 0 12px; 
+  border: 1.5px solid #8e5adf; 
+  box-shadow: 0 2px 4px rgba(150,0,250,1); 
+  transition: all .3s ease; 
+} 
+
+.modules-right:hover, .modules-left:hover, .modules-center:hover { 
+  border-color: #00d4ff; 
+  box-shadow: 0 0 8px #00d4ff88; 
+} 
+
+/* Tooltip */
+tooltip { 
+  background-color: rgba(20, 20, 32, 0.95); 
+  border-radius: 6px; 
+  padding: 4px 8px; 
+  color: #c9b6f4; 
+  border: 1px solid #6a00f4;
+} 
+
+/* Modules */
+#network, #pulseaudio, #battery, #clock, #backlight, #memory, #cpu, #temperature, #disk { 
+  padding: 3px; 
+  border-radius: 4px; 
+  transition: all .5s ease-in-out; 
+} 
+
+#clock { margin-left: 5px; }
+
+#network:hover, #pulseaudio:hover, #battery:hover, #clock:hover, #backlight:hover, 
+#memory:hover, #window:hover, #cpu:hover, #temperature:hover, #disk:hover { 
+  color: #00eaff;
+} 
+
+/* Workspaces */
+#workspaces button { 
+  margin: 2px 3px; 
+  padding: 0 4px;
+  border-radius: 30px 2px 30px 2px;
+  transition: all .5s ease; 
+  color: #bdb4e6; 
+  background: unset; 
+  border: none; 
+  font-weight: bold; 
+} 
+
+#workspaces button.active { 
+  background: linear-gradient(45deg, #00d4ff, #8e5adf); 
+  color: #12121a; 
+  /* animation: glowPulse 5s linear infinite; */
+  box-shadow: 0 0 5px #00c9ff;
+} 
+
+#workspaces button:hover { 
+  border-color: #00eaff; 
+  color: #ffffff; 
+}

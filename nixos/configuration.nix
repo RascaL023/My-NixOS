@@ -60,6 +60,7 @@
   	exfatprogs
   	brightnessctl
   	pamixer
+  	libnotify
 
   # Extra
     htop
@@ -72,6 +73,8 @@
     tty-clock
     cmatrix
     nwg-look
+    zsh
+    wlogout
 
   # Preview - Editor
 		viewnior
@@ -103,11 +106,10 @@
     xwayland			   
     waybar             
     swww
-    wofi 
     rofi-wayland              
     grim               
-    mako               
     slurp
+    swaynotificationcenter
    ];
 
   # Default mount

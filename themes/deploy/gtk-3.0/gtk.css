@@ -1,3 +1,7 @@
+*{
+	font-weight: 500;
+}
+
 .nemo-window{
   background-color: rgba(0, 0, 0, 0.65);
 }

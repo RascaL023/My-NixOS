@@ -69,11 +69,11 @@
 
   "pulseaudio": {
     "format": "{icon} {volume}%",
-    "format-icons": [" ", " ", " "]
+    "format-icons": ["", "", ""]
   },
 
   "backlight": {
-    "format": "  {percent}%",
+    "format": " {percent}%",
     "tooltip-format": "Brigthness: {percent}%"
   }
 }

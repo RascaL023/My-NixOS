@@ -1,0 +1,75 @@
+/* Base Waybar */
+#waybar { 
+  background: unset; 
+  font-weight: 600; 
+  font-size: 10px; 
+  color: #c9b6f4; /* ungu soft */
+} 
+
+/* @keyframes glowPulse {  */
+/*   0%   { box-shadow: 0 0 2px #9d4edd; background: #7b2cbf; }  */
+/*   50%  { box-shadow: 0 0 10px 4px #00c9ff; background: #5a189a; }  */
+/*   100% { box-shadow: 0 0 2px #9d4edd; background: #7b2cbf; }  */
+/* }  */
+
+/* Modules Container */
+.modules-right, .modules-left, .modules-center { 
+  background: rgba(34, 34, 48, 0.85); 
+  margin: 5px 5px 0; 
+  border-radius: 18px; 
+  padding: 0 12px; 
+  border: 1.5px solid #8e5adf; 
+  box-shadow: 0 2px 6px rgba(0,0,0,0.4); 
+  transition: all .3s ease; 
+} 
+
+.modules-right:hover, .modules-left:hover, .modules-center:hover { 
+  border-color: #00d4ff; 
+  box-shadow: 0 0 8px #00d4ff88; 
+} 
+
+/* Tooltip */
+tooltip { 
+  background-color: rgba(20, 20, 32, 0.95); 
+  border-radius: 6px; 
+  padding: 4px 8px; 
+  color: #c9b6f4; 
+  border: 1px solid #6a00f4; 
+} 
+
+/* Modules */
+#network, #pulseaudio, #battery, #clock, #backlight, #memory, #cpu, #temperature, #disk { 
+  padding: 3px; 
+  border-radius: 4px; 
+  transition: all .2s ease-in-out; 
+} 
+
+#clock { margin-left: 5px; }
+
+#network:hover, #pulseaudio:hover, #battery:hover, #clock:hover, #backlight:hover, 
+#memory:hover, #window:hover, #cpu:hover, #temperature:hover, #disk:hover { 
+  color: #00eaff;
+} 
+
+/* Workspaces */
+#workspaces button { 
+  margin: 2px 3px; 
+  padding: 0 4px;
+  border-radius: 30px 2px 30px 2px;
+  transition: all .2s ease; 
+  color: #bdb4e6; 
+  background: unset; 
+  border: 1px solid transparent; 
+} 
+
+#workspaces button.active { 
+  background: linear-gradient(135deg, #8e5adf, #00d4ff); 
+  color: #12121a; 
+  font-weight: bold; 
+  border: none; 
+} 
+
+#workspaces button:hover { 
+  border-color: #00eaff; 
+  color: #ffffff; 
+}
