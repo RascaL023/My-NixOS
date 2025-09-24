@@ -42,7 +42,7 @@
 
 /* ── 2. Control Center Container ─────────────────────────────────── */
 .control-center {
-  background-color: rgba(22, 22, 28, 0.5);
+  background-color: rgba(22, 22, 28, 0.8);
   border: 1px solid @border_medium;
   border-top-color: @border_light;
   border-bottom-color: @border_dark;

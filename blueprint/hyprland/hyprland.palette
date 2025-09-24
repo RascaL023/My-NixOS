@@ -1,0 +1,10 @@
+shadowPower: 1
+shadow: false
+gapsOut: 5
+shadowRange: 6
+borderSize: 2
+inactiveBorder: rgba(0,0,0,0)
+activeBorder: rgba(8f00ffee) rgba(33ccffee) 45deg
+rounding: 10
+gapsIn: 3
+shadowColor: rgba(0,255,255,0.4)

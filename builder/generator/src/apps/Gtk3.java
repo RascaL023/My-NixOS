@@ -2,9 +2,9 @@ package jsoncgen.apps;
 import jsoncgen.tools.ConfigSetter;
 
 public class Gtk3 extends ConfigSetter{
-    public Gtk3(String path){
-        parseTemplate(path);
-        initDefaults();
+    public Gtk3(String path, boolean key){
+        super(path, "Gtk3", key);
+        if(key) initDefaults();
     }
 
     @Override

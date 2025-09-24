@@ -50,7 +50,8 @@
 		"format": "",
 		"tooltip": false,
 		"cursor": true,
-		"on-click": "/home/rascal/.dotfiles/themes/scripts/waybar/distro-button.sh"
+		"on-click": "/home/rascal/.dotfiles/themes/scripts/waybar/distro-button.sh 1",
+		"on-click-right": "/home/rascal/.dotfiles/themes/scripts/waybar/distro-button.sh 3"
 	},
 	"custom/power_menu": {
 		"format": "󰤄",

@@ -2,9 +2,9 @@ package jsoncgen.apps;
 import jsoncgen.tools.ConfigSetter;
 
 public class Cava extends ConfigSetter{
-    public Cava(String path){
-        parseTemplate(path);
-        initDefaults();
+    public Cava(String path, boolean key){
+        super(path, "Cava", key);
+        if(key) initDefaults();
     }
 
     @Override

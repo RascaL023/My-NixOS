@@ -61,6 +61,7 @@
   	brightnessctl
   	pamixer
   	libnotify
+  	fzf
 
   # Extra
     htop
@@ -110,6 +111,9 @@
     grim               
     slurp
     swaynotificationcenter
+
+  # Pentest
+  	aircrack-ng
    ];
 
   # Default mount

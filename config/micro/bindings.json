@@ -1,4 +1,6 @@
 {
     "Alt-/": "lua:comment.comment",
+    "Ctrl-b": "command:tree",
+    "CtrlSpace": "command:lspcompletion",
     "CtrlUnderscore": "lua:comment.comment"
 }

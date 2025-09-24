@@ -1,0 +1,12 @@
+waybarBg: unset
+waybarFontSize: 10px
+waybarFg: #cfa3e9
+modulesBg: rgba(49, 50, 68, 0.8)
+modulesBorderRadius: 20px
+modulesBorder: 2px solid #b86fd4
+tooltipBg: rgba(30, 30, 46, 0.95)
+tooltipBorderRadius: 6px
+moduleHoverFg: white
+workspacesBtn: #cdd6f4
+workspacesActiveBg: #b86fd4
+workspacesActiveFg: #1e1e2e

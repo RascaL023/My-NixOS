@@ -1,5 +1,5 @@
-gradient1 = ${gradient1}
-gradient2 = ${gradient2}
-gradient3 = ${gradient3}
-gradient4 = ${gradient4}
-gradient5 = ${gradient5}
+gradient1 = "${gradient1}"
+gradient2 = "${gradient2}"
+gradient3 = "${gradient3}"
+gradient4 = "${gradient4}"
+gradient5 = "${gradient5}"

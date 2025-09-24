@@ -2,9 +2,9 @@ package jsoncgen.apps;
 import jsoncgen.tools.ConfigSetter;
 
 public class Hyprland extends ConfigSetter{
-    public Hyprland(String path){
-        parseTemplate(path);
-        initDefaults();
+    public Hyprland(String path, boolean key){
+        super(path, "Hyprland", key);
+        if(key) initDefaults();
     }
 
     @Override

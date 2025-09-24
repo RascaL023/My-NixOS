@@ -1,0 +1,33 @@
+package jsoncgen.tools;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class PaletteLoader {
+    public static void loadFromFile(ConfigSetter setter, String path) {
+        try (BufferedReader br = new BufferedReader(new FileReader(path))) { String line;
+            while ((line = br.readLine()) != null) {
+                line = line.trim();
+
+                // Skip baris kosong atau komentar
+                if (line.isEmpty() || line.startsWith("#")) continue;
+
+                // Pecah "key : value" atau "key: value"
+                String[] parts = line.split(":", 2);
+                if (parts.length < 2) continue;
+
+                String key = parts[0].trim();
+                String value = parts[1].trim();
+
+                // Hapus trailing semicolon (kalau ada, seperti di mechabox)
+                if (value.endsWith(";")) {
+                    value = value.substring(0, value.length() - 1).trim();
+                }
+
+                setter.set(key, value);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}

@@ -2,9 +2,9 @@ package jsoncgen.apps;
 import jsoncgen.tools.ConfigSetter;
 
 public class Kitty extends ConfigSetter {
-    public Kitty(String templatePath) {
-        parseTemplate(templatePath);
-        initDefaults();
+    public Kitty(String templatePath, boolean key) {
+        super(templatePath, "Kitty", key);
+        if(key) initDefaults();
     }
 
     @Override

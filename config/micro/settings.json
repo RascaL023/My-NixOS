@@ -6,5 +6,10 @@
     "scrollbar": false,
     "truecolor": true,
     "cursorline": false,
-    "statusline": true
+    "statusline": true,
+    "tabcompletion": true,
+    "autoclose": true,
+    "autoindent": true,
+    "clipboard": "terminal",
+    "autofilemanager": true
 }

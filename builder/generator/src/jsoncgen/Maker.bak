@@ -1,0 +1,82 @@
+// package jsoncgen;
+// import jsoncgen.tools.Theme;
+// import jsoncgen.apps.*;
+
+// import com.google.gson.Gson;
+// import com.google.gson.GsonBuilder;
+// import java.io.FileWriter;
+// import java.io.IOException;
+// import java.util.Scanner;
+// import java.util.LinkedHashMap;
+// import java.util.Map;
+
+// public class Maker {
+//     Scanner inp = new Scanner(System.in);
+//     final String template = "config.template";
+//     final String rootPath = "/home/rascal/.dotfiles/themes/base/";
+//     final String blueprintRootPath = "/home/rascal/.dotfiles/blueprint/";
+//     String selectedPath = "";
+
+//     // Representasi info aplikasi
+//     static class AppInfo {
+//         String key;          // key di JSON (ex: "kitty")
+//         String templateFile; // nama file template
+//         String paletteFile;  // nama file palette
+
+//         AppInfo(String key, String templateFile, String paletteFile) {
+//             this.key = key;
+//             this.templateFile = templateFile;
+//             this.paletteFile = paletteFile;
+//         }
+//     }
+
+//     // daftar semua apps
+//     private static final AppInfo[] apps = {
+//         new AppInfo("kitty", "config.template", "kitty.palette"),
+//         new AppInfo("cava", "config.template", "cava.palette"),
+//         new AppInfo("gtk-3.0", "config.template", "gtk3.palette"),
+//         new AppInfo("hyprland", "config.template", "hyprland.palette")
+//     };
+
+//     private String resolvePath(String app, String file, int input) {
+//         if (input == 1) {
+//             return rootPath + app + "/" + file;
+//         } else {
+//             return blueprintRootPath + app + "/" + file;
+//         }
+//     }
+    
+//     Map<String, Object> allApps = new LinkedHashMap<>();
+
+//     // khusus waybar, karena punya 2 layout
+//     Map<String, Object> waybarLayouts = new LinkedHashMap<>();
+//     waybarLayouts.put("mine", new Waybar.Mine(
+//         resolvePath("waybar/mine", input == 1 ? "style.css.template" : "mine.palette", input),
+//         input == 1
+//     ).getAll());
+
+//     waybarLayouts.put("mechabox", new Waybar.Mechabox(
+//         resolvePath("waybar/mechabox", input == 1 ? "source.css.template" : "mechabox.palette", input),
+//         input == 1
+//     ).getAll());
+
+//     allApps.put("waybar", waybarLayouts);
+
+//     // sisanya loop otomatis
+//     for (AppInfo app : apps) {
+//         String path = resolvePath(app.key, input == 1 ? app.templateFile : app.paletteFile, input);
+
+//         ConfigSetter cfg = switch (app.key) {
+//             case "kitty" -> new Kitty(path, input == 1);
+//             case "cava" -> new Cava(path, input == 1);
+//             case "gtk-3.0" -> new Gtk3(path, input == 1);
+//             case "hyprland" -> new Hyprland(path, input == 1);
+//             default -> null;
+//         };
+
+//         if (cfg != null) {
+//             allApps.put(app.key, cfg.getAll());
+//         }
+//     }
+
+// }
