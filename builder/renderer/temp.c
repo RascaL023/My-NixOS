@@ -19,25 +19,27 @@ int main(int argc, char* params[]) {
         const char *name;
         const char *suffix;
     } mapping[] = {
-        // {"waybar",   "/live/source.css"},
+        {"waybar",   "/live/source.css"},
         {"kitty",    "/colors.conf"},
         {"cava",     "/config_extra"},
         {"gtk-3.0",  "/gtk.css"},
         {"hyprland", "/ui.conf"}
     };
+    
+    // const char *waybarLayout[] = {"mine", "mechabox"}; ???
 
     // =========== INPUT ===========
     if (argc < 3) { fprintf(stderr, "Usage: %s <root> <theme>\n", params[0]); return 1; }
     
-    const char *apps[] = { /*"waybar",*/ "kitty", "cava", "gtk-3.0", "hyprland" };
+    const char *apps[] = { "waybar", "kitty", "cava", "gtk-3.0", "hyprland" };
     size_t apps_count = sizeof(apps) / sizeof(apps[0]);
 
     char *json_path = build_path("%s/theme/%s/theme.json", params[1], params[2]);
 
     char *apps_path[apps_count];
     for (size_t i = 0; i < apps_count; i++) { 
-        // if(i == 0) apps_path[i] = build_path("%s/base/%s/mine/source.css.template", params[1], apps[i]);
-        apps_path[i] = build_path("%s/base/%s/config.template", params[1], apps[i]);
+        if(i == 0) apps_path[i] = build_path("%s/base/%s/mine/source.css.template", params[1], apps[i]);
+        else apps_path[i] = build_path("%s/base/%s/config.template", params[1], apps[i]);
     }
 
     const char *root_output_path   = "/home/rascal/.dotfiles/themes/deploy/";

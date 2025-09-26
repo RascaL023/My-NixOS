@@ -122,7 +122,13 @@
     fsType = "exfat";
     options = [ "defaults" "uid=1000" "gid=1000" ];
   };
-  
+
+  # Proyektor
+  # Driver grafis
+  hardware.graphics.enable = true;
+
+  # Intel HD → pakai modesetting driver
+  services.xserver.videoDrivers = [ "modesetting" ];
    
   system.stateVersion = "25.05";
 }

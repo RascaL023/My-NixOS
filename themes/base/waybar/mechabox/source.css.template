@@ -44,6 +44,3 @@
 @define-color warning       ${warning};       /* pink-ungu cerah */
 @define-color critical      ${critical};      /* ungu tajam */
 @define-color charging      ${charging};      /* ungu elektrik */
-
-
-
