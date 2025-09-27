@@ -19,7 +19,6 @@ int main(int argc, char* params[]) {
         const char *name;
         const char *suffix;
     } mapping[] = {
-        // {"waybar",   "/live/source.css"},
         {"kitty",    "/colors.conf"},
         {"cava",     "/config_extra"},
         {"gtk-3.0",  "/gtk.css"},
@@ -29,16 +28,13 @@ int main(int argc, char* params[]) {
     // =========== INPUT ===========
     if (argc < 3) { fprintf(stderr, "Usage: %s <root> <theme>\n", params[0]); return 1; }
     
-    const char *apps[] = { /*"waybar",*/ "kitty", "cava", "gtk-3.0", "hyprland" };
+    const char *apps[] = { "kitty", "cava", "gtk-3.0", "hyprland" };
     size_t apps_count = sizeof(apps) / sizeof(apps[0]);
 
     char *json_path = build_path("%s/theme/%s/theme.json", params[1], params[2]);
 
     char *apps_path[apps_count];
-    for (size_t i = 0; i < apps_count; i++) { 
-        // if(i == 0) apps_path[i] = build_path("%s/base/%s/mine/source.css.template", params[1], apps[i]);
-        apps_path[i] = build_path("%s/base/%s/config.template", params[1], apps[i]);
-    }
+    for (size_t i = 0; i < apps_count; i++) apps_path[i] = build_path("%s/base/%s/config.template", params[1], apps[i]);    
 
     const char *root_output_path   = "/home/rascal/.dotfiles/themes/deploy/";
 
@@ -82,8 +78,7 @@ int main(int argc, char* params[]) {
         char *result = strdup(template); free(template); // ✅ template sudah tidak perlu, jadi dibuang
         cJSON *conf = NULL;
         cJSON_ArrayForEach(conf, app) {
-            const char *key = conf->string;
-            const char *val = cJSON_GetStringValue(conf);
+            const char *key = conf->string,  *val = cJSON_GetStringValue(conf);
             if (key && val) {
                 char *tmp = replace_placeholder(result, key, val);
                 free(result);
@@ -103,8 +98,7 @@ int main(int argc, char* params[]) {
             fputs(result, out);
             fclose(out);
             printf("✅ Config %s berhasil di-render ke %s\n", apps[i], output_path);
-        }
-        free(result);
+        }free(result);
     }
 
     // cleanup

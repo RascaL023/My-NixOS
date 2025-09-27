@@ -5,16 +5,16 @@ int main(int lim, char* layouts[]){
 
     char template_path[100];
     snprintf(template_path, sizeof(template_path), "/home/rascal/.dotfiles/themes/base/waybar/%s/source.css.template", layouts[1]);
-    const char* output_path = "/home/rascal/.dotfiles/themes/deploy/waybar/live/source.cssx";
-    // char json_path[] = "/home/rascal/.dotfiles/themes/current/theme.json";
-    char json_path[] = "/home/rascal/.dotfiles/themes/theme/Target/theme.json";
+    const char output_path[] = "/home/rascal/.dotfiles/themes/deploy/waybar/live/source.cssx";
+    // const char json_path[] = "/home/rascal/.dotfiles/themes/current/theme.json";
+    const char json_path[] = "/home/rascal/.dotfiles/themes/theme/Target/theme.json";
 
-    char *json_data = NULL;
-    cJSON *json = NULL;
-    char *template = NULL;
-    char *result = NULL;
-    FILE *out = NULL;
     int ret = 0;
+    FILE *out = NULL;
+    cJSON *json = NULL;
+    char *result = NULL;
+    char *template = NULL;
+    char *json_data = NULL;
 
     json_data = read_file(json_path);
     if (!json_data) { ret = 1; goto cleanup; }

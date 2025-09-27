@@ -114,6 +114,12 @@
 
   # Pentest
   	aircrack-ng
+
+  # Proyektor
+  	wlr-randr      # mirip xrandr untuk Wayland
+  	way-displays   # GUI buat atur monitor/proyektor
+  	kanshi         # auto profile (misal: kalau colok proyektor)
+  	pavucontrol    # atur audio HDMI
    ];
 
   # Default mount
