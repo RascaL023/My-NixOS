@@ -1,13 +1,9 @@
 @define-color waybarBg ${waybarBg};
-@define-color waybarFontSize ${waybarFontSize};
 @define-color waybarFg ${waybarFg};
 
 @define-color modulesBg ${modulesBg};
-@define-color modulesBorder ${modulesBorder};
-@define-color modulesBorderRadius ${modulesBorderRadius};
 
 @define-color tooltipBg ${tooltipBg};
-@define-color tooltipBorderRadius ${tooltipBorderRadius};
 
 @define-color moduleHoverFg ${moduleHoverFg};
 

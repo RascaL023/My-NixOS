@@ -1,14 +1,10 @@
 {
   "waybar": {
     "mine": {
-      "waybarBg": "unset",
-      "waybarFontSize": "10px",
+      "waybarBg": "transparent",
       "waybarFg": "#E0E0E0",
       "modulesBg": "rgba(28, 28, 28, 0.8)",
-      "modulesBorderRadius": "20px",
-      "modulesBorder": "2px solid #B22222",
       "tooltipBg": "rgba(20, 20, 20, 0.95)",
-      "tooltipBorderRadius": "6px",
       "moduleHoverFg": "#FF0000",
       "workspacesBtn": "#AAAAAA",
       "workspacesActiveBg": "#B22222",

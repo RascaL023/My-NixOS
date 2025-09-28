@@ -3,7 +3,7 @@
 #waybar {
   background: @waybarBg;
   font-weight: 600;
-  font-size: @waybarFontSize;
+  font-size: 10px;
   color: @waybarFg;
 }
 
@@ -17,15 +17,15 @@
 .modules-right, .modules-left, .modules-center {
   background: @modulesBg;
   margin: 5px 5px 0;
-  border-radius: @modulesBorderRadius;
+  border-radius: 20px;
   padding: 0 10px;
   animation: wkwk .3s;
-  border: @modulesBorder;
+  border: 2px solid #B22222;
 }
 
 tooltip {
   background-color: @tooltipBg;
-  border-radius: @tooltipBorderRadius;
+  border-radius: 6px;
   padding: 4px 8px;
 }
 

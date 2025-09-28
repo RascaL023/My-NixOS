@@ -1,11 +1,11 @@
 .nemo-window{
-  background-color: none;
+  background-color: rgba(0, 0, 0, 0.65);
 }
 
 .toolbar, .primary-toolbar{
-  background-color: none;
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .sidebar, .view{
-  background-color: none;
+  background-color: transparent;
 }

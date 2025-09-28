@@ -1,7 +1,7 @@
 {
   "waybar": {
     "mine": {
-      "waybarBg": "unset",
+      "waybarBg": "transparent",
       "waybarFontSize": "10px",
       "waybarFg": "#cfa3e9",
       "modulesBg": "rgba(49, 50, 68, 0.8)",
@@ -108,7 +108,7 @@
     "inactiveBorder": "rgba(0,0,0,0)",
     "activeBorder": "rgba(8f00ffee) rgba(33ccffee) 45deg",
     "rounding": "0",
-    "gapsIn": "3",
+    "gapsIn": "1",
     "shadowColor": "rgba(0,255,255,0.4)"
   }
 }

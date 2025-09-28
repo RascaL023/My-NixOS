@@ -1,13 +1,12 @@
 #include "header.h"
 
 int main(int lim, char* layouts[]){
-    if (lim < 2) { fprintf(stderr, "Usage: %s <layouts>\n", layouts[0]); return 1; }
+    if (lim < 2) { fprintf(stderr, "Usage: %s <layouts>\n", layouts[1]); return 1; }
 
     char template_path[100];
     snprintf(template_path, sizeof(template_path), "/home/rascal/.dotfiles/themes/base/waybar/%s/source.css.template", layouts[1]);
-    const char output_path[] = "/home/rascal/.dotfiles/themes/deploy/waybar/live/source.cssx";
-    // const char json_path[] = "/home/rascal/.dotfiles/themes/current/theme.json";
-    const char json_path[] = "/home/rascal/.dotfiles/themes/theme/Target/theme.json";
+    const char output_path[] = "/home/rascal/.dotfiles/themes/deploy/waybar/live/source.css";
+    const char json_path[] = "/home/rascal/.dotfiles/themes/current/theme.json";
 
     int ret = 0;
     FILE *out = NULL;
@@ -64,7 +63,7 @@ int main(int lim, char* layouts[]){
 cleanup:
     if (out) fclose(out);
     free(result);
-    free(template); // aman walaupun NULL
+    free(template);
     free(json_data);
     if (json) cJSON_Delete(json);
 
