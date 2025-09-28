@@ -84,7 +84,8 @@
     "color12": "#7b91fc",
     "color13": "#f3fc7b",
     "color14": "#8F56E1",
-    "color15": "#d8cab8"
+    "color15": "#d8cab8",
+    "opacity": "0.7"
   },
   "cava": {
     "gradient4": "#DA70D6",
@@ -106,7 +107,7 @@
     "borderSize": "2",
     "inactiveBorder": "rgba(0,0,0,0)",
     "activeBorder": "rgba(8f00ffee) rgba(33ccffee) 45deg",
-    "rounding": "10",
+    "rounding": "0",
     "gapsIn": "3",
     "shadowColor": "rgba(0,255,255,0.4)"
   }

@@ -1,16 +1,11 @@
-if [[ $3 == 1 ]]; then
-    clear;
-fi
-
 root="/home/rascal/.dotfiles/themes"
-themeName="default"
-waybarLayout="mechabox"
+themeName="$3"
 
 if [[ $1 == "run" ]]; then
     if [[ $2 == "main" ]]; then
-        ./bin/render "$root" "$themeName"
+        "$HOME"/.dotfiles/builder/renderer/bin/render "$root" "$themeName"
     elif [[ $2 == "waybar" ]]; then
-        ./bin/waybar "$waybarLayout"
+        "$HOME"/.dotfiles/builder/renderer/bin/waybar "$themeName"
     else
         echo "Invalid run"
     fi

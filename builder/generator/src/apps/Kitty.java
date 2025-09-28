@@ -30,5 +30,6 @@ public class Kitty extends ConfigSetter {
         set("color14", "#8F56E1");
         set("color7", "#fc92fc");
         set("color15", "#d8cab8");
+        set("opacity", "1");
     }
 }
