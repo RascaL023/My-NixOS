@@ -45,7 +45,8 @@
 	],
 	"custom/distro": {
 		"format": "",
-		"tooltip": false
+		"tooltip": false,
+		"on-click": "eww open --toggle music"
 	},
 	"custom/power_menu": {
 		"format": "󰤄",
@@ -462,7 +463,8 @@
 		--------------*/
 	
 		"custom/user": {
-			"exec": "id --user --name",
+			"exec": "whoami",
+			"on-click": "eww open --toggle profile",
 			// "exec-if":
 			// "exec-on-event":
 			// "hide-empty-text":

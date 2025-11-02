@@ -81,7 +81,7 @@ button.active label {
 	color: @accent;
 }
 #custom-distro {
-	padding: 0 10px 0 3px;
+	padding: 0 10px 0 2px;
 	font-size: 23px;
 	background-color: @accent;
 	color: @main-bg;

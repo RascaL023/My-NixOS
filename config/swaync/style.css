@@ -27,7 +27,7 @@
 
 /* ── Base Reset ───────────────────────────────────────────────────── */
 * {
-  font-family: "Maple Mono NF", "Inter", sans-serif;
+  font-family: "Inter", "Maple Mono NF", sans-serif;
   font-size: 12px;
   color: @theme_fg;
   border: none;
@@ -101,7 +101,6 @@
 .widget-mpris {
   padding: 0;
   border: none;
-
   border-radius: 18px;
   background: transparent;
 }

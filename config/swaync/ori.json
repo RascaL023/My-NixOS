@@ -59,15 +59,30 @@
           "tooltip": "Network"
         },
         {
+          "label": "",
+          "command": "blueman-manager",
+          "tooltip": "Bluetooth"
+        },
+        {
           "label": "󰂛",
           "command": "swaync-client -d",
           "type": "toggle",
           "tooltip": "DND"
         },
         {
+          "label": "󰍜",
+          "command": "gnome-network-displays",
+          "tooltip": "Screens"
+        },
+        {
           "label": "󰈙",
-          "command": "kitty lf",
+          "command": "kitty bash -i -c 'Docs'",
           "tooltip": "Files"
+        },
+        {
+          "label": "",
+          "command": "kitty bash -i -c 'Settings'",
+          "tooltip": "Settings"
         },
         {
           "label": "",

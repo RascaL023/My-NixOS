@@ -1,0 +1,69 @@
+(defwidget profile []
+  (box :orientation "v" :class "profile" :spacing 7
+    (box :orientation "h" :spacing 7 :class "profile-box"
+      (image :path "/home/rascal/Pictures/Mine/Me-circled.png"
+            :class "profile-pic"
+            :image-width 60
+            :image-height 60)
+      (label :text "Ra$caL" :class "profile-name")
+    )
+
+    (box :orientation "h" :spacing 1 :class "power-box"
+      (button :class "power-btn" :onclick "./scripts/power.sh 'shutdown'" (label :text ""))
+      (button :class "power-btn" :onclick "./scripts/power.sh 'lock'" (label :text ""))
+      (button :class "power-btn" :onclick "./scripts/power.sh 'logout'" (label :text "󰍃"))
+    )
+  )
+)
+      
+
+(defwindow profile
+  :monitor 0
+  :stacking "fg"
+  :geometry (geometry
+              :x "0.5%"
+              :y "0.3%"
+              :width "10%"
+              :height "10%"
+              :anchor "top left")
+  (profile))
+
+(defpoll music-info :interval "3s" "./scripts/music.sh")
+(defwidget music-player []
+  (box :orientation "h"
+       :class "music-player"
+       :space-evenly false
+       :halign "center"
+       :valign "center"
+       :spacing 10
+
+       (eventbox :cursor "pointer"
+                 :onclick "playerctl previous"
+                 (label :text "" :class "music-btn"))
+
+       (eventbox :cursor "pointer"
+                 :onclick "playerctl play-pause"
+                 (label :text "" :class "music-btn"))
+
+       (eventbox :cursor "pointer"
+                 :onclick "playerctl next"
+                 (label :text "" :class "music-btn"))
+
+       (label :text "${music-info}"
+              :class "music-text"
+              :limit-width 30
+              :tooltip "${music-info}")
+  )
+)
+
+(defwindow music
+  :monitor 0
+  :stacking "fg"
+  :focusable false
+  :geometry (geometry
+              :x "0"
+              :y "0.3%"
+              :width "30%"
+              :height "5%"
+              :anchor "top center")
+  (music-player))
