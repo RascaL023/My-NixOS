@@ -44,7 +44,7 @@
       "image-radius": 10
     },
     "volume": {
-      "label": "",
+      "label": " ",
       "step": 5
     },
     "backlight": {

@@ -1,58 +1,53 @@
+; /* ============================= WIDGET DEFINITIONS ============================= */
 (defwidget profile []
-  (box :orientation "v" :class "profile" :spacing 7
-    (box :orientation "h" :spacing 7 :class "profile-box"
+  (box :orientation "v" :class "profile" :spacing 1
+    (box :orientation "h" :spacing 12 :class "profile-box"
       (image :path "/home/rascal/Pictures/Mine/Me-circled.png"
-            :class "profile-pic"
-            :image-width 60
-            :image-height 60)
-      (label :text "Ra$caL" :class "profile-name")
+        :class "profile-pic"
+        :image-height 70)
+      (label :text "Ra$caL" :class "profile-name" :valign "center")
     )
-
-    (box :orientation "h" :spacing 1 :class "power-box"
-      (button :class "power-btn" :onclick "./scripts/power.sh 'shutdown'" (label :text ""))
-      (button :class "power-btn" :onclick "./scripts/power.sh 'lock'" (label :text ""))
-      (button :class "power-btn" :onclick "./scripts/power.sh 'logout'" (label :text "󰍃"))
+    (box :orientation "v" :spacing 1
+      (box :orientation "h" :spacing 1 :class "power-item" :halign "center"
+        (button :class "power-btn" :onclick "./scripts/power.sh 'shutdown'" "")
+        (button :class "power-btn" :onclick "./scripts/power.sh 'sleep'" "")
+        (button :class "power-btn" :onclick "./scripts/power.sh 'reboot'" "")
+      )
+      (box :orientation "h" :spacing 8 :class "power-item" :halign "center"
+        (button :class "power-btn" :onclick "./scripts/power.sh 'logout'" "󰍃")
+        (button :class "power-btn" :onclick "./scripts/power.sh 'lock'" "")
+      )
     )
   )
 )
-      
 
 (defwindow profile
   :monitor 0
   :stacking "fg"
   :geometry (geometry
-              :x "0.5%"
-              :y "0.3%"
-              :width "10%"
-              :height "10%"
-              :anchor "top left")
+    :x "0.5%"
+    :y "0.3%"
+    :width "18%"
+    :height "15%"
+    :anchor "top left")
   (profile))
 
 (defpoll music-info :interval "3s" "./scripts/music.sh")
+
 (defwidget music-player []
   (box :orientation "h"
-       :class "music-player"
-       :space-evenly false
-       :halign "center"
-       :valign "center"
-       :spacing 10
-
-       (eventbox :cursor "pointer"
-                 :onclick "playerctl previous"
-                 (label :text "" :class "music-btn"))
-
-       (eventbox :cursor "pointer"
-                 :onclick "playerctl play-pause"
-                 (label :text "" :class "music-btn"))
-
-       (eventbox :cursor "pointer"
-                 :onclick "playerctl next"
-                 (label :text "" :class "music-btn"))
-
-       (label :text "${music-info}"
-              :class "music-text"
-              :limit-width 30
-              :tooltip "${music-info}")
+    :class "music-player"
+    :space-evenly false
+    :halign "center"
+    :valign "center"
+    :spacing 5
+    (button :class "music-btn" :onclick "playerctl previous" "")
+    (button :class "music-btn play-btn" :onclick "playerctl play-pause" "")
+    (button :class "music-btn" :onclick "playerctl next" "")
+    (label :text "${music-info}"
+      :class "music-text"
+      :limit-width 35
+      :tooltip "${music-info}")
   )
 )
 
@@ -61,9 +56,9 @@
   :stacking "fg"
   :focusable false
   :geometry (geometry
-              :x "0"
-              :y "0.3%"
-              :width "30%"
-              :height "5%"
-              :anchor "top center")
+    :x "0"
+    :y "0.3%"
+    :width "30%"
+    :height "5%"
+    :anchor "top center")
   (music-player))
