@@ -1,0 +1,79 @@
+-- plugin manager (pakai lazy.nvim)
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system({
+    "git", "clone", "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git", "--branch=stable", lazypath
+  })
+end
+vim.opt.rtp:prepend(lazypath)
+
+require("lazy").setup({
+  { "neovim/nvim-lspconfig" },
+  { "hrsh7th/nvim-cmp" },
+  { "hrsh7th/cmp-nvim-lsp" },
+  { "L3MON4D3/LuaSnip" },
+})
+
+-- aktifkan LSP jdtls
+local lspconfig = require("lspconfig")
+lspconfig.jdtls.setup{}
+
+-- aktifkan nvim-cmp
+local cmp = require("cmp")
+cmp.setup({
+  snippet = {
+    expand = function(args)
+      require("luasnip").lsp_expand(args.body)
+    end,
+  },
+  mapping = cmp.mapping.preset.insert({
+    ['<C-Space>'] = cmp.mapping.complete(),
+    ['<CR>'] = cmp.mapping.confirm({ select = true }),
+  }),
+  sources = cmp.config.sources({
+    { name = 'nvim_lsp' },
+  }),
+})
+
+vim.opt.termguicolors = true
+vim.opt.number = true
+vim.opt.relativenumber = true
+vim.opt.cursorline = true
+vim.opt.signcolumn = "yes"
+vim.opt.scrolloff = 4
+vim.opt.wrap = false
+
+require("lazy").setup({
+  -- Tema
+  { "folke/tokyonight.nvim", lazy = false, priority = 1000, config = function()
+      vim.cmd([[colorscheme tokyonight]])
+    end
+  },
+
+  -- Status line modern
+  { "nvim-lualine/lualine.nvim", config = function()
+      require("lualine").setup({
+        options = { theme = "tokyonight", section_separators = "", component_separators = "|" }
+      })
+    end
+  },
+
+  -- File explorer
+  { "nvim-tree/nvim-tree.lua", dependencies = { "nvim-tree/nvim-web-devicons" }, config = function()
+      require("nvim-tree").setup()
+    end
+  },
+
+  -- Fuzzy finder
+  { "nvim-telescope/telescope.nvim", dependencies = { "nvim-lua/plenary.nvim" } },
+
+  -- Syntax highlight modern
+  { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate", config = function()
+      require("nvim-treesitter.configs").setup({
+        highlight = { enable = true },
+        indent = { enable = true },
+      })
+    end
+  },
+})
