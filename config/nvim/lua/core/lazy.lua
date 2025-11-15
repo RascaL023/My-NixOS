@@ -28,5 +28,8 @@ require("lazy").setup({
   { import = "plugins.mason" },
 
   -- multi-cursor-select
-  { import = "plugins.multi-cursor" }
+  { import = "plugins.multi-cursor" },
+
+  -- dashboard view 
+  { import = "plugins.alpha"}
 })
