@@ -81,7 +81,20 @@ end, {})
 vim.keymap.set("v", "<C-/>", "<esc><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<CR>i", {})
 
 -- Close active
-map("n", "<leader>w", ":q<CR>", opts)
+-- map("n", "<leader>w", ":q<CR>", opts)
+vim.keymap.set("n", "<leader>w", function()
+  if vim.bo.modified then
+    local input = vim.fn.input("Save before quit? (y/n): ")
+    if input == "y" then
+      vim.cmd("w | q")
+    elseif input == "n" then
+      vim.cmd("q!")
+    end
+  else
+    vim.cmd("q")
+  end
+end)
+
 
 -- Switch file
 -- vim.keymap.set("n", "<C-Tab>", "<Cmd>bnext<CR>", { silent = true })
