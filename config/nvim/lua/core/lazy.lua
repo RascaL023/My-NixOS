@@ -31,5 +31,14 @@ require("lazy").setup({
   { import = "plugins.multi-cursor" },
 
   -- dashboard view 
-  { import = "plugins.alpha"}
+  { import = "plugins.alpha"},
+
+  -- comments
+   { import = "plugins.comment"},
+
+  -- autopairs
+  { import = "plugins.autopairs"},
+
+    -- extra
+  { import = "plugins.extra"}
 })
